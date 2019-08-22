@@ -11,6 +11,9 @@ WORKDIR /app
 
 RUN pip install -r requirements.txt
 
+ENV FLASK_APP app.py
+ENV FLASK_DEBUG 1
+
 COPY . /app
 
 ENTRYPOINT [ "python" ]

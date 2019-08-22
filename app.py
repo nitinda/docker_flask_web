@@ -1,12 +1,13 @@
-import flask
-from flask import Flask
+from flask import Flask, render_template
+from flask_bootstrap import Bootstrap
+
 app = Flask(__name__)
+Bootstrap(app)
 
 @app.route('/')
 def hello_word():
-    return 'Hey, we have Flask in a Docker container!'
+    return render_template('index.html')
+
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0')
-
-    
+    app.run()
