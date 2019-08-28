@@ -2,7 +2,7 @@
 # ####################################################
 #
 
-NAME := "nitindas/docker_flask_web"
+NAME := "nitindas/flask-tutorial"
 TAG := $$(git log --pretty=format:'' | wc -l)
 # TAG  := $$(git log -1 --pretty=%h)
 IMG := ${NAME}:${TAG}
